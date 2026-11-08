@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "warehouse",
+    "name": "Автосклад",
     "slug": "warehouse",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -10,15 +10,42 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.hobbit_tm.warehouse",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
-      }
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "monochromeImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#4F46E5"
+      },
+      "permissions": [
+        "android.permission.CAMERA"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-sqlite",
+      "expo-status-bar",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Камера нужна для сканирования штрихкодов",
+          "recordAudioAndroid": false
+        }
+      ],
+      "expo-sharing",
+      "expo-image"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "7bb3ad87-b4cb-4ae9-957d-1a64221a2a9d"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/7bb3ad87-b4cb-4ae9-957d-1a64221a2a9d"
     }
   }
 }
